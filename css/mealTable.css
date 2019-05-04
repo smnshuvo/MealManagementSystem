@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 4, 2019, 2:31:41 PM
+    Author     : smnsh
+*/
+
+table {
+    margin: auto;
+    border: 1 px solid black;
+    box-shadow: 10px 10px 10px;
+    text-align: center;
+}
+
+#date {
+    color: red;
+    background: bisque;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 40px;
+}
+
+#Shuvo {
+      color: black;
+    background:thistle;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Touhid {
+      color: black;
+    background:turquoise;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Mahir {
+      color: black;
+    background:tomato;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Mehedi {
+      color: white;
+    background:teal;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Mahmud {
+      color: #fff;
+    background:slategray;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Anik {
+      color: white;
+    background:sienna;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+
+#Amount {
+      color: white;
+    background:royalblue;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 60px;
+}
+#done_by {
+    text-align: center;
+      color: wheat;
+    background:cadetblue;
+    border: 1px solid black;
+    height: 20px;
+    min-width: 140px;
+}
+
+

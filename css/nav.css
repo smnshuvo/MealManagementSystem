@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 4, 2019, 4:10:50 PM
+    Author     : smnsh
+*/
+
+nav{
+
+background: black;
+padding-top: 10px;
+height: 20px;
+width: 100%;
+padding-bottom: 10px;
+}
+
+nav a{
+    background: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    
+}
+
+nav a:hover{
+    background: #444444;
+    border-radius: 7px;
+    
+    
+}
+
+
+
+nav #title{
+    float: left;
+    color: white;
+    width: 250px;
+    padding: 0 10 5 20;
+    font-size: 12px;
+}
+
+nav #links{
+    float: right;
+}
+
+
+
+#smn {
+   color: yellow;
+    font-size: 25px;
+    
+}
+
+#Shuvo {
+    font-size: 20px;
+}
+
+#title:hover {
+    color: yellow;
+
+}
+
+#smn:hover {
+   
+    color: white;
+  
+}
+
+
+#feedback{
+    height: 400px;
+    background: grey;
+    box-shadow: 10px 10px 20px;
+}
+
+.fleft{
+    float: left;
+    width: 60%;
+    height: 100%;
+   
+}
+
+#fleftcontainer{
+    padding-left: 30px;
+}
+.fright{
+    float: right;
+    width: 40%;
+  
+    height: 100%;
+	overflow: hidden;
+
+}
+
+#clear{
+  clear: both;
+}
+
+#feedback #box{
+    height: 100px;
+    width: 400px;
+}
+
+#feedback #post{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-left: 53px;
+}
+
+form input{
+    background: black;
+    color: white;
+}
+
+#comments{
+    float: left;
+    margin: 20 80 10 0;
+    border: 1px solid white;
+    min-height: 100px;
+    min-width: 300px;
+    box-shadow: 10px 10px 20px #888;
+    text-align: left;
+
+}
+#comments td{
+    color: white;
+}
+
+#username {
+    background: black;
+}
