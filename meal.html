@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Add your meal </title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/meal.css">
+</head>
+
+<body>
+
+    <div class="full full-header">
+        <div class="main">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/meal-logo.png" alt="Image here" style="height:70px">
+                </a>
+            </div>
+             <div class="menu">
+                <ul>
+                   <li><a href="#">Home</a></li>
+                    <li><a href="#">Mehedi</a></li>
+                    <li><a href="#">Shuvo</a></li>
+                    <li><a href="#">Towhid</a></li>
+                    <li><a href="#">Mahir</a></li>
+                    <li><a href="#">Mahmud</a></li>
+                    <li><a href="#">Anik</a></li>
+                    
+                </ul>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <!--   end of header -->
+    
+   <div class="full full-table">
+
+       <div class="form">
+           <form method="post" action="addMeal.php">
+           <p>Date</p>
+           <select name="Date">
+        <option value="">Day</option>
+            <option value="">01</option>
+                <option value="">02</option>
+                    <option value="">03</option>
+                        <option value="">04</option>
+                            <option value="">05</option>
+                                <option value="">06</option>
+                                        <option value="">07</option>
+                                            <option value="">08</option>
+                                              <option value="">09</option>
+                                                <option value="10">10</option>
+                                                <option value="">11</option>
+                                                <option value="">12</option>
+                                                <option value="">13</option>
+                                                <option value="">14</option>
+                                                <option value="">15</option>
+                                                <option value="">16</option>
+                                                <option value="">17</option>
+                                                <option value="">18</option>
+                                                <option value="19">19</option>
+                                                <option value="">20</option>
+                                            <option value="">21</option>
+                                         <option value="">22</option>
+                                      <option value="">23</option>
+                                    <option value="">24</option>
+                                 <option value="">24</option>
+                              <option value="">25</option>
+                          <option value="">26</option>
+                      <option value="">27</option>
+                   <option value="">28</option>
+              <option value="">29</option>
+         <option value="">30</option>
+     <option value="">31</option>
+               
+        </select> 
+               </div>
+               <div class="form1">
+          <p>Mehedi</p>
+          <input type="number" name="Mehedi" class="txt" id="txt" min="0" placeholder="Mehedi" required>
+          <p>Shuvo</p>
+          <input type="number" name="Shuvo" class="txt" id="txt" min="0" placeholder="Shuvo" required>
+          <p>Towhid</p>
+          <input type="number" name="Towhid" class="txt" id="txt" min="0" placeholder="Touhid" required>
+          <p>Mahir</p>
+          <input type="number" name="Mahir" class="txt" id="txt" min="0" placeholder="Mahir" required>
+          <p>Mahmud</p>
+          <input type="number" name="Mahmud"  class="txt" id="txt" min="0" placeholder="Mahmud" required>
+          <p>Anik</p>
+          <input type="number" name="Anik"  class="txt" id="txt" min="0" placeholder="Aniik" required>
+          <br>
+          <br>
+          <p>Total</p>
+          <input type="number" name="Amount"  class="txt" id="no-arrow" placeholder="Total" required>
+           <br>
+           <br>
+           <input type="submit" value="submit">
+           </form>
+       </div>
+   </div>
+
+<script src="Javascript/main.js"></script>
+<script src="Javascript/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
