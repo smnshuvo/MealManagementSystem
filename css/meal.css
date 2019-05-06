@@ -98,8 +98,8 @@ select{
     font-weight: 400;
     font-size: 25pt;
 }
-button{
-    padding: 20px 40px;
+input[type=submit]{
+ padding: 20px 40px;
     background-color: #1d5bcf;
     border-style: none;
     color: #0b1016;
@@ -111,17 +111,19 @@ button{
     border: 1px solid transparent;
     transition: all 0.5s linear;
 }
-button:hover{
+
+input[type=submit]:hover{
     background-color: transparent;
     color: #1d32cf;
     border-color: #cfc91d;
     padding: 20px 30px;
     border-radius: 10px;
 }
-marquee{
+
+#creator{
    font-weight: 400;
     font-size: 18pt;
-    color: rgba(13, 19, 26, 0.47)
+    color: rgba(255, 255, 255, 0.46)
 }
 
 .no-arrow {
