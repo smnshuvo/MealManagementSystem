@@ -25,10 +25,13 @@ and open the template in the editor.
             </div>
             <!-- This is where all the links are -->
             <div id="links">
-        <a href="index.php"> Home </a>
+                <a href="meal.php"> Home </a>
+                <a href="insert.php"> Add Meal </a>
+                <a href="edit.php"> Edit Meal </a>
         <a href="meal.php"> Show meals </a>
             <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
                 <a href="#"> Notifications </a>
+                
             </div>
         </nav>
         <br>
