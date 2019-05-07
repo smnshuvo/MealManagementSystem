@@ -4,11 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php
-session_start();
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-?>
+
 <html>
     <head>
         <meta charset="UTF-16">
@@ -50,6 +46,7 @@ window.onclick = function(event) {
                 <a href="#"> Notifications </a>
                 
             </div>
+          
         </nav>
         <br>
         <br>
@@ -118,7 +115,8 @@ print_r("<table>" ."<tr>".
     </div>
   </form>
 </div>
- <!--       
+ <!--    
+ Session testing
         <?php
 print_r($_SESSION);
 ?>
