@@ -11,7 +11,7 @@ $pass = filter_input(INPUT_POST, 'psw');
 if($usr=="towhid-may" && $pass="12345"){
     echo "OK";
 session_start();
-$_SESSION["user"] = "usr";
+$_SESSION["user"] = $usr;
 } else {
     echo "ERR";
 }

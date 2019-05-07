@@ -23,7 +23,8 @@
                 <a href="edit.php"> Edit Meal </a>
         <a href="meal.php"> Show meals </a>
             <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
-                <a href="#"> Notifications </a>
+            <a href="advance.php"> Advanced </a>   
+            <a href="#"> Notifications </a>
                 
             </div>
         </nav>
