@@ -4,6 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+session_start();
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+?>
 <html>
     <head>
         <meta charset="UTF-16">
@@ -11,8 +16,20 @@ and open the template in the editor.
             
         </title>
         <link rel="stylesheet" type="text/css" href="css/mealTable.css">
-        <link rel="stylesheet" type="text/css" href="css/nav.css">
+        <link rel="stylesheet" type="text/css" href="css/Mealnav.css">
         <link rel="stylesheet" type="text/css" href="css/log-in.css">
+        <!-- JS -->
+        <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
     </head>
     <body>
         
@@ -25,7 +42,7 @@ and open the template in the editor.
             </div>
             <!-- This is where all the links are -->
             <div id="links">
-                <a href="meal.php"> Home </a>
+                <a href="mealHome.php"> Home </a>
                 <a href="insert.php"> Add Meal </a>
                 <a href="edit.php"> Edit Meal </a>
         <a href="meal.php"> Show meals </a>
@@ -73,14 +90,8 @@ print_r("<table>" ."<tr>".
 	
        
         ?>
-    </body>
-    
-    <!-- Log in Part-->
-    
-    
-
-
-<div id="id01" class="modal">
+        
+        <div id="id01" class="modal">
   
     <form class="modal-content animate" action="verify-manager.php" method="post">
     <div class="imgcontainer">
@@ -107,17 +118,20 @@ print_r("<table>" ."<tr>".
     </div>
   </form>
 </div>
+ <!--       
+        <?php
+print_r($_SESSION);
+?>
+ -->
+    </body>
+    
+    <!-- Log in Part-->
+    
+    
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+
+
+
 
 </html>

@@ -33,6 +33,7 @@ nav a{
 nav a:hover{
     background: #444444;
     border-radius: 7px;
+    color: yellow;
     
     
 }
@@ -74,66 +75,3 @@ nav #links{
   
 }
 
-
-#feedback{
-    height: 400px;
-    background: grey;
-    box-shadow: 10px 10px 20px;
-}
-
-.fleft{
-    float: left;
-    width: 60%;
-    height: 100%;
-   
-}
-
-#fleftcontainer{
-    padding-left: 30px;
-}
-.fright{
-    float: right;
-    width: 40%;
-  
-    height: 100%;
-	overflow: hidden;
-
-}
-
-#clear{
-  clear: both;
-}
-
-#feedback #box{
-    height: 100px;
-    width: 400px;
-}
-
-#feedback #post{
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-left: 53px;
-}
-
-form input{
-    background: black;
-    color: white;
-}
-
-#comments{
-    float: left;
-    margin: 20 80 10 0;
-    border: 1px solid white;
-    min-height: 100px;
-    min-width: 300px;
-    box-shadow: 10px 10px 20px #888;
-    text-align: left;
-
-}
-#comments td{
-    color: white;
-}
-
-#username {
-    background: black;
-}
