@@ -98,8 +98,8 @@ select{
     font-weight: 400;
     font-size: 25pt;
 }
-input[type=submit]{
- padding: 20px 40px;
+button{
+    padding: 20px 40px;
     background-color: #1d5bcf;
     border-style: none;
     color: #0b1016;
@@ -111,19 +111,17 @@ input[type=submit]{
     border: 1px solid transparent;
     transition: all 0.5s linear;
 }
-
-input[type=submit]:hover{
+button:hover{
     background-color: transparent;
     color: #1d32cf;
     border-color: #cfc91d;
     padding: 20px 30px;
     border-radius: 10px;
 }
-
-#creator{
+marquee{
    font-weight: 400;
     font-size: 18pt;
-    color: rgba(255, 255, 255, 0.46)
+    color: rgba(13, 19, 26, 0.47)
 }
 
 .no-arrow {

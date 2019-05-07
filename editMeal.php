@@ -21,10 +21,10 @@ $sql = "UPDATE `mess_manager` SET "
         . "`Touhid` = $touhid, "
         . "`Mahir` = $mahir, "
         . "`Mehedi` = $mehedi, "
-        . "`Mahmud` = $mahmud, "
-        . "`Anik` = $anik, "
-        . "`Amount` = $amount, "
-        . "`done_by` = $done_by "
+        . "`Mahmud` = '34', "
+        . "`Anik` = '33', "
+        . "`Amount` = '4304', "
+        . "`done_by` = '343' "
         . "WHERE `mess_manager`.`Date` = $date";
 
 if ($cnct->query($sql)){
