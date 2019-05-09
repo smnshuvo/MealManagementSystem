@@ -56,9 +56,23 @@ window.onclick = function(event) {
         include ('connect.php');
         $sql = "SELECT * FROM mess_manager";
         $output ='';
+        $shuvo_total = 0;
+        $touhid_total =0;
+        $mehedi_total = 0;
+        $mahir_total = 0;
+        $mahmud_total = 0;
+        $anik_total = 0;
+        $total_bajar = 0;
         $result = mysqli_query($cnct, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
-            
+            $shuvo_total += $row['Shuvo'];
+            $touhid_total += $row['Shuvo'];
+             $mehedi_total += $row['Mehedi'];
+        $mahir_total += $row['Mahir'];
+        $mahmud_total += $row['Mahmud'];
+        $anik_total += $row['Anik'];
+        $total_bajar += $row['Amount'];
+            // Table Generation
             $output.=	"<tr>" . "<td id='date'>". $row['Date'] . "</td>" .
 "<td id='Shuvo'>" . $row['Shuvo']. "</td>".
 "<td id='Touhid'>" . $row['Touhid']. "</td>".
@@ -73,7 +87,7 @@ window.onclick = function(event) {
           
     
 }
- 
+ // echo "$shuvo_total";
 // print part
 print_r("<table>" ."<tr>". 
 "<td id='date'>" . "Date". "</td>". "<td id='Shuvo'>" . "Shuvo". "</td>".
@@ -84,9 +98,21 @@ print_r("<table>" ."<tr>".
 "<td id='Anik'>" . "Anik". "</td>". 
 "<td id='Amount'>" . "Amount". "</td>". 
 "<td id='done_by'>" . "Done by". "</td>".         
-"</tr>" . $output . "</table>");
-	
-       
+"</tr>" . $output . 
+        "<tr>". 
+"<td id='date'>" . "Total". 
+"</td>". "<td id='Shuvo'>" . $shuvo_total. "</td>".
+"<td id='Touhid'>" . $touhid_total . "</td>".
+"<td id='Mahir'>" . $mahir_total . "</td>".
+"<td id='Mehedi'>" . $mehedi_total . "</td>".
+"<td id='Mahmud'>" . $mahmud_total. "</td>".
+"<td id='Anik'>" . $anik_total . "</td>". 
+"<td colspan = 2 id='done_by'>" . $total_bajar. " BDT" . "</td>". 
+         
+"</tr>" .
+        "</table>");
+$averageMealRate = $total_bajar / ($shuvo_total+$touhid_total+$mahir_total+$mehedi_total+$mahmud_total+$anik_total);
+ echo "(Beta) Average meal rate " . "$averageMealRate" ;
         ?>
         
         <div id="id01" class="modal">
