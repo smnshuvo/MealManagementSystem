@@ -21,4 +21,7 @@ if ($cnct->query($sql)){
 else {
     echo "error" . $cnct->error;
 }
+// cloxd connection
+
+ mysqli_close($cnct);
 ?>

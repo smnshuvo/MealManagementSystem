@@ -54,6 +54,7 @@ window.onclick = function(event) {
         
         <?php
         include ('connect.php');
+        
         $sql = "SELECT * FROM mess_manager";
         $output ='';
         $shuvo_total = 0;
@@ -113,7 +114,11 @@ print_r("<table>" ."<tr>".
         "</table>");
 $averageMealRate = $total_bajar / ($shuvo_total+$touhid_total+$mahir_total+$mehedi_total+$mahmud_total+$anik_total);
  echo "(Beta) Average meal rate " . "$averageMealRate" ;
-        ?>
+    
+ // cloxd connection
+
+ mysqli_close($cnct);
+ ?>
         
         <div id="id01" class="modal">
   
