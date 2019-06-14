@@ -23,7 +23,6 @@
                 <li> <a href="insert.php"> Add Meal </a> </li>
                 <li><a href="edit.php"> Edit Meal </a> </li>
         <li> <a href="meal.php"> Show meals </a> </li>
-        <li>    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a> </li>
           <li>  <a href="advance.php"> Advanced </a>      </li>
            <li> <a href="#"> Notifications </a> </li>
                     
@@ -75,17 +74,17 @@
                </div>
                <div class="form1">
           <p>Mehedi</p>
-          <input type="number" name="Mehedi" class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Mehedi" class="txt" id="txt" min="0"  value="0" required>
           <p>Shuvo</p>
-          <input type="number" name="Shuvo" class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Shuvo" class="txt" id="txt" min="0"  value="0" required>
           <p>Towhid</p>
-          <input type="number" name="Touhid" class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Touhid" class="txt" id="txt" min="0"  value="0" required>
           <p>Mahir</p>
-          <input type="number" name="Mahir" class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Mahir" class="txt" id="txt" min="0"  value="0" required>
           <p>Mahmud</p>
-          <input type="number" name="Mahmud"  class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Mahmud"  class="txt" id="txt" min="0"  value="0" required>
           <p>Anik</p>
-          <input type="number" name="Anik"  class="txt" id="txt" min="0" placeholder="Meal Amount" required>
+          <input type="number" name="Anik"  class="txt" id="txt" min="0"  value="0" required>
           <br>
           <br>
           <p>Total</p>
@@ -94,7 +93,7 @@
           <p>Done By</p>
           <div class="select">
            <select name="doneby" style="width:250px">
-           <option value="">Name</option>
+           <option value="Unknown">Name</option>
                        <option value="Mehedi">Mehedi</option>
                           <option value="Shuvo">Shuvo</option>
                            <option value="Touhid">Touhid</option>
