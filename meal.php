@@ -182,7 +182,7 @@ echo " <div class='mealMeter' style='width:" . $mahmud_percentage . "%'>" .
 echo "<h1> Anik </h1> " . ($averageMealRate * $anik_total) . " Taka" . "</br></br>";
 echo " <div class='mealMeter' style='width:" . $anik_percentage . "%'>" .
  round($anik_total, 2)
- . " Meal</div>";
+ . " Meal<br><br><br><br></div>";
 ?>
                 <br>
                 <br>
@@ -212,7 +212,20 @@ print_r($_SESSION);
         
         <div id='Advance_taka'>
             <?php
-         
+            include 'connect.php';
+            $person = array("Shuvo", "Mahir", "Touhid", "Mehedi", "Mahmud", "Anik");
+            $i = 0;
+            
+            for($i=0;$i<count($person);$i++){
+            
+            $sql = "SELECT SUM($person[$i])"
+                    . "FROM mess_advance;";
+            $result = (mysqli_query($cnct, $sql));
+            
+            $row = mysqli_fetch_assoc($result); 
+            $temp = ""."SUM(".$person[$i].")";
+            echo $row[$temp] . "<br>";
+            }
 
             
             ?>
