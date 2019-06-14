@@ -42,12 +42,12 @@
 
 ?>
         <!-- Form that will help to post meal -->
-        <form method="post" action="#">
+        <form method="POST" action="advance-submitter.php">
             <br> Date: <input type="text" v
                               <?php 
                               $time = date('l jS \of F Y h:i:s A');
                               echo "value='$time'";
-                              ?> disabled name="Date"> 
+                              ?> disabled name="time"> 
          <br> Shuvo: <input type="text" name="Shuvo"> 
             Touhid: <input type="text" name="Touhid"> 
           Mahir: <input type="text" name="Mahir">  

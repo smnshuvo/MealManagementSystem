@@ -209,6 +209,15 @@ print_r($_SESSION);
         -->
         <br>
 
+        
+        <div id='Advance_taka'>
+            <?php
+         
+
+            
+            ?>
+            
+        </div>
     </body>
 
 
