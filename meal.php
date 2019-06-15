@@ -24,6 +24,16 @@ and open the template in the editor.
                 vertical-align: middle;
                 padding-top: 5px;
             }
+
+            .redBar{
+                height: 30px;
+                background: red;
+                font-size: 15px;
+                color: #fff;
+                padding-top: 10px;
+                vertical-align: middle;
+                padding-top: 5px;
+            }
         </style>
         <!-- JS -->
         <script>
@@ -144,46 +154,46 @@ and open the template in the editor.
 
             <div class="container">
 
-<?php
-echo "<h1> Shuvo </h1> " . ($averageMealRate * $shuvo_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $shuvo_percentage . "%'>" .
- round($shuvo_total, 2)
- . " Meal</div>";
+                <?php
+                echo "<h1> Shuvo </h1> " . ($averageMealRate * $shuvo_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $shuvo_percentage . "%'>" .
+                round($shuvo_total, 2)
+                . " Meal</div>";
 
 // touhid
 
-echo "<h1> Towhid </h1> " . ($averageMealRate * $touhid_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $touhid_percentage . "%'>" .
- round($touhid_total, 2)
- . " Meal</div>";
+                echo "<h1> Towhid </h1> " . ($averageMealRate * $touhid_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $touhid_percentage . "%'>" .
+                round($touhid_total, 2)
+                . " Meal</div>";
 
 
 // mahir 
 
-echo "<h1> Mahir </h1> " . ($averageMealRate * $mahir_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $mahir_percentage . "%'>" .
- round($mahir_total, 2)
- . " Meal</div>";
+                echo "<h1> Mahir </h1> " . ($averageMealRate * $mahir_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $mahir_percentage . "%'>" .
+                round($mahir_total, 2)
+                . " Meal</div>";
 
 // Mehedi 
 
 
-echo "<h1> Mehedi </h1> " . ($averageMealRate * $mehedi_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $mehedi_percentage . "%'>" .
- round($mehedi_total, 2)
- . " Meal</div>";
+                echo "<h1> Mehedi </h1> " . ($averageMealRate * $mehedi_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $mehedi_percentage . "%'>" .
+                round($mehedi_total, 2)
+                . " Meal</div>";
 
 // Mahmud
-echo "<h1> Mahmud </h1> " . ($averageMealRate * $mahmud_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $mahmud_percentage . "%'>" .
- round($mahmud_total, 2)
- . " Meal</div>";
+                echo "<h1> Mahmud </h1> " . ($averageMealRate * $mahmud_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $mahmud_percentage . "%'>" .
+                round($mahmud_total, 2)
+                . " Meal</div>";
 
-echo "<h1> Anik </h1> " . ($averageMealRate * $anik_total) . " Taka" . "</br></br>";
-echo " <div class='mealMeter' style='width:" . $anik_percentage . "%'>" .
- round($anik_total, 2)
- . " Meal<br><br><br><br></div>";
-?>
+                echo "<h1> Anik </h1> " . ($averageMealRate * $anik_total) . " Taka" . "</br></br>";
+                echo " <div class='mealMeter' style='width:" . $anik_percentage . "%'>" .
+                round($anik_total, 2)
+                . " Meal<br><br><br><br></div>";
+                ?>
                 <br>
                 <br>
                 <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Okay</button>
@@ -203,33 +213,117 @@ echo " <div class='mealMeter' style='width:" . $anik_percentage . "%'>" .
         </div>
         <!--    
         Session testing
-<?php
-print_r($_SESSION);
-?>
+        <?php
+        print_r($_SESSION);
+        ?>
         -->
         <br>
 
-        
+
         <div id='Advance_taka'>
+            <!-- instead of using name 
+            I thought of using an array
+            of String, as there is a chance
+            of one member from us can leave
+            this house
+            -->
+
             <?php
             include 'connect.php';
             $person = array("Shuvo", "Mahir", "Touhid", "Mehedi", "Mahmud", "Anik");
             $i = 0;
-            
-            for($i=0;$i<count($person);$i++){
-            
-            $sql = "SELECT SUM($person[$i])"
-                    . "FROM mess_advance;";
-            $result = (mysqli_query($cnct, $sql));
-            
-            $row = mysqli_fetch_assoc($result); 
-            $temp = ""."SUM(".$person[$i].")";
-            echo $row[$temp] . "<br>";
-            }
+            $person_advanced = array();
 
-            
+            for ($i = 0; $i < count($person); $i++) {
+
+                $sql = "SELECT SUM($person[$i])"
+                        . "FROM mess_advance;";
+                $result = (mysqli_query($cnct, $sql));
+
+                $row = mysqli_fetch_assoc($result);
+                $temp = "" . "SUM(" . $person[$i] . ")";
+                array_push($person_advanced, $row[$temp]);
+            }
+            // print_r($person_advanced);
+            // Current meal counter 
+
+            $shuvo_currentCost = (($averageMealRate * $shuvo_total));
+            $touhid_currentCost = (($averageMealRate * $touhid_total) );
+            $mahir_currentCost = (($averageMealRate * $mahir_total) );
+            $mehedi_currentCost = (($averageMealRate * $mehedi_total) );
+            $mahmud_currentCost = (($averageMealRate * $mahmud_total) );
+            $anik_currentCost = (($averageMealRate * $anik_total) );
+
+
+            // Another meal meter to count the advance
+            echo "<h1> Shuvo </h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[0] . "px'>" .
+            $person_advanced[0]
+            . " Taka (Advance) </div>";
+            echo " <div class='redBar' style='width:" . $shuvo_currentCost
+            . "px'>" .
+            round($shuvo_currentCost, 2)
+            . " Taka </div>";
+
+// touhid
+
+            echo "<h1> Towhid</h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[1] . "px'>" .
+            $person_advanced[1]
+            . " Taka (Advance)</div>";
+            echo " <div class='redBar' style='width:" . $touhid_currentCost
+            . "px'>" .
+            round($touhid_currentCost, 2)
+            . " Taka </div>";
+
+
+// mahir 
+
+            echo "<h1> Mahir </h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[2] . "px'>" .
+            $person_advanced[2]
+            . " Taka (Advance)</div>";
+            echo " <div class='redBar' style='width:" . $mahir_currentCost
+            . "px'>" .
+            round($mahir_currentCost, 2)
+            . " Taka </div>";
+
+// Mehedi 
+
+
+            echo "<h1> Mehedi </h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[3] . "px'>" .
+            $person_advanced[3]
+            . " Taka (Advance)</div>";
+            echo " <div class='redBar' style='width:" . $mehedi_currentCost
+            . "px'>" .
+            round($mehedi_currentCost, 2)
+            . " Taka </div>";
+
+// Mahmud
+            echo "<h1> Mahmud </h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[4] . "px'>" .
+            $person_advanced[4]
+            . " Taka (Advance)</div>";
+            echo " <div class='redBar' style='width:" . $mahmud_currentCost
+            . "px'>" .
+            round($mahmud_currentCost, 2)
+            . " Taka </div>";
+
+            echo "<h1> Anik </h1> " . "</br>";
+            echo " <div class='mealMeter' style='width:" . $person_advanced[5] . "px'>" .
+            $person_advanced[5]
+            . " Taka (Advance)<br><br><br><br></div>";
+            echo " <div class='redBar' style='width:" . $anik_currentCost
+            . "px'>" .
+            round($anik_currentCost, 2)
+            . " Taka </div>";
             ?>
-            
+
+
+
+
+
         </div>
     </body>
 

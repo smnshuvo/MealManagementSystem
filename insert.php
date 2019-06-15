@@ -5,6 +5,7 @@
         </title>
         <link rel="stylesheet" type="text/css" href="css/form.css">
         <link rel="stylesheet" type="text/css" href="css/Mealnav.css">
+        <link rel="stylesheet" type="text/css" href="css/customRadioButton.css">
     </head>
     
     <body>
@@ -31,15 +32,66 @@
         
         <!-- Form that will help to post meal -->
         <form method="post" action="addMeal.php">
-            <br> Date: <input type="text" name="Date"> 
-         <br> Shuvo: <input type="text" name="Shuvo"> 
-            Touhid: <input type="text" name="Touhid"> 
-          Mahir: <input type="text" name="Mahir">  
-           <br> Mehedi <input type="text" name="Mehedi"> 
-           Mahmud <input type="text" name="Mahmud"> 
-            Anik <input type="text" name="Anik"> 
-           <br> Total <input type="text" name="Amount">
-         <br> Done by: <input type="text" name="done_by">
+            <br> Date: <input type="text" name="Date" 
+                              
+                                
+            <?php
+                              $today = date("d");
+                              echo "value='$today'>" ;
+                              ?>
+                              
+            <!-- We don't expect more than 5 meals a day from any of use -->
+            <br> Shuvo: <br>
+            <input type="radio" name="Shuvo" value="0"> 0 
+            <input type="radio" name="Shuvo" value="1"> 1     
+            <input type="radio" name="Shuvo" value="2"> 2
+            <input type="radio" name="Shuvo" value="3"> 3
+            <input type="radio" name="Shuvo" value="4"> 4
+            <input type="radio" name="Shuvo" value="5"> 5
+            <br> Touhid: <br>
+            <input type="radio" name="Touhid" value="0"> 0
+            <input type="radio" name="Touhid" value="1"> 1     
+            <input type="radio" name="Touhid" value="2"> 2
+            <input type="radio" name="Touhid" value="3"> 3
+            <input type="radio" name="Touhid" value="4"> 4
+            <input type="radio" name="Touhid" value="5"> 5
+            <br> Mahir: <br> 
+            <input type="radio" name="Mahir" value="0"> 0 
+            <input type="radio" name="Mahir" value="1"> 1     
+            <input type="radio" name="Mahir" value="2"> 2
+            <input type="radio" name="Mahir" value="3"> 3
+            <input type="radio" name="Mahir" value="4"> 4
+            <input type="radio" name="Mahir" value="5"> 5 
+            <br> Mehedi  <br>
+            <input type="radio" name="Mehedi" value="0"> 0  
+            <input type="radio" name="Mehedi" value="1"> 1     
+            <input type="radio" name="Mehedi" value="2"> 2
+            <input type="radio" name="Mehedi" value="3"> 3
+            <input type="radio" name="Mehedi" value="4"> 4
+            <input type="radio" name="Mehedi" value="5"> 5
+            <br> Mahmud  <br>
+            <input type="radio" name="Mahmud" value="0"> 0  
+            <input type="radio" name="Mahmud" value="1"> 1     
+            <input type="radio" name="Mahmud" value="2"> 2
+            <input type="radio" name="Mahmud" value="3"> 3
+            <input type="radio" name="Mahmud" value="4"> 4
+            <input type="radio" name="Mahmud" value="5"> 5
+            <br> Anik  <br>
+            <input type="radio" name="Anik" value="0"> 0 
+            <input type="radio" name="Anik" value="1"> 1     
+            <input type="radio" name="Anik" value="2"> 2
+            <input type="radio" name="Anik" value="3"> 3
+            <input type="radio" name="Anik" value="4"> 4
+            <input type="radio" name="Anik" value="5"> 5
+            <br> Total <input type="text" name="Amount">
+            <br> Done by: <select name="done_by">
+                <option value="Shuvo">Shuvo</option>
+                <option value="Mahir">Mahir</option>
+                <option value="Towhid">Towhid</option>
+                <option value="Mehedi">Mehedi</option>
+                <option value="Mahmud">Mahmud</option>
+                <option value="Anik">Anik</option>
+            </select>
           <input type="submit" value="submit">
         </form>
     </body>

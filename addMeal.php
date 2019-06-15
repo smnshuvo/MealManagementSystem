@@ -14,13 +14,20 @@ $done_by = filter_input(INPUT_POST, 'done_by');
 $sql = "INSERT INTO mess_manager (Date, Shuvo, Touhid, Mahir, Mehedi, Mahmud, Anik, Amount, done_by) VALUES "
         . "('$date', '$shuvo', '$touhid', '$mahir', '$mehedi', '$mahmud', '$anik' ,'$amount', '$done_by')";
 
-if ($cnct->query($sql)){
+if (isset($_POST['Date'])) {
+    
+    if ($cnct->query($sql)){
     echo "Data added";
     echo "<br> <a href='meal.php'> Click Here to See the meals </a>";
 }
 else {
     echo "error" . $cnct->error;
 }
+    
+    
+}
+
+
 // cloxd connection
 
  mysqli_close($cnct);
