@@ -327,7 +327,7 @@ and open the template in the editor.
             . " Taka </div>";
             echo "BALANCE: " . ($person_advanced[5] - $anik_currentCost) ;
             $total_advanced = array_sum($person_advanced);
-            echo "<br> <h1> Meal Balance: ". ($total_bajar - $total_advanced) . "</h1>";
+            echo "<br> <h1> Meal Balance: ". ($total_advanced - $total_bajar) . "</h1>";
             ?>
 
 
