@@ -142,6 +142,9 @@ and open the template in the editor.
 
         mysqli_close($cnct);
         ?>
+        <?php 
+            
+        ?>
 
         <div id="id01" class="modal">
 
@@ -159,6 +162,7 @@ and open the template in the editor.
                 echo " <div class='mealMeter' style='width:" . $shuvo_percentage . "%'>" .
                 round($shuvo_total, 2)
                 . " Meal</div>";
+                
 
 // touhid
 
@@ -230,7 +234,7 @@ and open the template in the editor.
 
             <?php
             include 'connect.php';
-            $person = array("Shuvo", "Mahir", "Touhid", "Mehedi", "Mahmud", "Anik");
+            $person = array("Shuvo", "Touhid", "Mahir", "Mehedi", "Mahmud", "Anik");
             $i = 0;
             $person_advanced = array();
 
@@ -264,6 +268,7 @@ and open the template in the editor.
             . "px'>" .
             round($shuvo_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[0] - $shuvo_currentCost) ;
 
 // touhid
 
@@ -275,6 +280,7 @@ and open the template in the editor.
             . "px'>" .
             round($touhid_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[1] - $touhid_currentCost) ;
 
 
 // mahir 
@@ -287,6 +293,7 @@ and open the template in the editor.
             . "px'>" .
             round($mahir_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[2] - $mahir_currentCost) ;
 
 // Mehedi 
 
@@ -299,6 +306,7 @@ and open the template in the editor.
             . "px'>" .
             round($mehedi_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[3] - $mehedi_currentCost) ;
 
 // Mahmud
             echo "<h1> Mahmud </h1> " . "</br>";
@@ -309,6 +317,7 @@ and open the template in the editor.
             . "px'>" .
             round($mahmud_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[4] - $mahmud_currentCost) ;
 
             echo "<h1> Anik </h1> " . "</br>";
             echo " <div class='mealMeter' style='width:" . $person_advanced[5] . "px'>" .
@@ -318,6 +327,7 @@ and open the template in the editor.
             . "px'>" .
             round($anik_currentCost, 2)
             . " Taka </div>";
+            echo "BALANCE: " . ($person_advanced[5] - $anik_currentCost) ;
             ?>
 
 
