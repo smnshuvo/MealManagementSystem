@@ -142,9 +142,7 @@ and open the template in the editor.
 
         mysqli_close($cnct);
         ?>
-        <?php 
-            
-        ?>
+       
 
         <div id="id01" class="modal">
 
@@ -328,6 +326,8 @@ and open the template in the editor.
             round($anik_currentCost, 2)
             . " Taka </div>";
             echo "BALANCE: " . ($person_advanced[5] - $anik_currentCost) ;
+            $total_advanced = array_sum($person_advanced);
+            echo "<br> <h1> Meal Balance: ". ($total_bajar - $total_advanced) . "</h1>";
             ?>
 
 
