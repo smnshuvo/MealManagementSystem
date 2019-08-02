@@ -10,46 +10,77 @@ and open the template in the editor.
 
 table {
     margin: auto;
-    border: 1 px solid black;
+    border: 1px solid black;
     box-shadow: 10px 10px 10px;
     text-align: center;
 }
 
+
 #date {
-    color: red;
-    background: bisque;
+     color: greenyellow;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
-    min-width: 40px;
+    min-width: 60px;
 }
 
 #Shuvo {
-      color: black;
-    background:thistle;
+    color: #fff;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 
 #Touhid {
-      color: black;
-    background:turquoise;
+    color: #fff;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 
 #Mahir {
-      color: black;
-    background:tomato;
+     color: #fff;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 
 #Mehedi {
-      color: white;
-    background:teal;
+       color: #fff;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
@@ -57,31 +88,56 @@ table {
 
 #Mahmud {
       color: #fff;
-    background:slategray;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 
 #Anik {
-      color: white;
-    background:sienna;
+   color: #fff;
+         background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 
 #Amount {
-      color: white;
-    background:royalblue;
+     color: #fff;
+       background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 60px;
 }
 #done_by {
     text-align: center;
-      color: wheat;
-    background:cadetblue;
+    color: #fff;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+  -55deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+);
     border: 1px solid black;
     height: 20px;
     min-width: 140px;
