@@ -16,4 +16,12 @@ With this new system meal will be calculated online.
 There is no index.php file as the project is hosted in an existing site.
 You may start with the [meal.php](https://github.com/smnshuvo/MealManagementSystem/meal.php)
 
+##### Meal Page
+![Meal](https://github.com/smnshuvo/MealManagementSystem/blob/master/images/meal.PNG)
 
+
+##### Meal Adding Page
+![Add Meal](https://github.com/smnshuvo/MealManagementSystem/blob/master/images/add_meal.PNG)
+
+##### For calculating balance
+![Advance](https://github.com/smnshuvo/MealManagementSystem/blob/master/images/advance.PNG)
