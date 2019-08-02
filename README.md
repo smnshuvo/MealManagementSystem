@@ -17,7 +17,7 @@ There is no index.php file as the project is hosted in an existing site.
 You may start with the [meal.php](https://github.com/smnshuvo/MealManagementSystem/meal.php)
 
 ##### Meal Page
-![Meal](https://github.com/smnshuvo/MealManagementSystem/blob/master/images/meal.PNG)
+![Meal](https://github.com/smnshuvo/MealManagementSystem/blob/master/images/meal.png)
 
 
 ##### Meal Adding Page
