@@ -13,7 +13,7 @@ With this new system meal will be calculated online.
 5. Less work, easier solution.
 
 ## Demo
-Visit [this site](https://mealrate.tk) to see an example.
+Visit [this site](http://mealrate.tk) to see an example.
 > Requested not to destroy the site.
 > I know my site is vulnerable to SQL Injection, XSS ..
 
