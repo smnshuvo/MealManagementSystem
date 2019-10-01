@@ -92,6 +92,8 @@
                 <option value="Mahmud">Mahmud</option>
                 <option value="Anik">Anik</option>
             </select>
+            <br> Password: 
+            <input type="password" name="password">
           <input type="submit" value="submit">
         </form>
     </body>

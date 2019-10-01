@@ -15,6 +15,9 @@
         </title>
         <link rel="stylesheet" type="text/css" href="css/Mealnav.css">
         <link rel="stylesheet" type="text/css" href="css/log-in.css">
+          
+ 
+ <script  src="css/script.js"></script>
     </head>
     <body>
         
@@ -36,4 +39,34 @@
                 
             </div>
         </nav>
+        
+        <div class="Poster">
+            <form action='post-data.php' method="post" enctype="multipart/form-data" >
+                <!-- I don't know why I am having to use enctype="multipart/form-data" -->
+                <p> Select Date </p>
+                <input type='date' name='date'>
+                <p> Title of your post </p>
+                <input type='text' name='title'>
+                <p> Post Details </p>
+                <input type='text' name='content'>
+                <p> Attach images </p>
+                <input type='file' name='image'>
+                <p> </p>
+                <input type='submit' name='submit_image' value='Submit Content'>
+                
+                
+            </form>
+            
+        </div>
+        
+        <div class="posts">
+          
+            
+        </div>
+        
     </body>
+    
+   
+            
+            
+            

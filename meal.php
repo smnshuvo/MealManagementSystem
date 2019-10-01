@@ -65,7 +65,7 @@ and open the template in the editor.
                 <a href="meal.php"> Show meals </a>
                 <a href="#" onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;">Meal Cost</a>
                 <a href="advance.php"> Advanced </a>     
-                <a href="#"> Notifications </a>
+                <a href="#"> Admin Panel </a>
 
             </div>
 
