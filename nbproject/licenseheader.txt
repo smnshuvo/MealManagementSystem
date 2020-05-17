@@ -1,8 +1,0 @@
-<#if licenseFirst??>
-${licenseFirst}
-</#if>
-${licensePrefix} Developed by SMN Shuvo
-${licensePrefix} Using it without credit will be under copyright strike ${licensePrefix}
-<#if licenseLast??>
-${licenseLast}
-</#if>
