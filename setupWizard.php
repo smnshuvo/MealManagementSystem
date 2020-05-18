@@ -69,24 +69,25 @@ Developed by SMN Shuvo
         <div class="col-lg-4">
         <form action="">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-md" placeholder="Manager Username">
+                    <input type="text" class="form-control form-control-md" placeholder="Manager Username" id="manager-username">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-md" placeholder="Email">
+                    <input type="email" class="form-control form-control-md" placeholder="Email" id="manager-email">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-md" placeholder="Password">
+                    <input type="password" class="form-control form-control-md" placeholder="Password" id="manager-password">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-md" placeholder="Confirm Password">
-                  </div>
-                  <input type="button" value="Next" class="btn btn-outline-success btn-block">
+                    <input type="password" class="form-control form-control-md" placeholder="Confirm Password" id="manager-password-verifier">
+                  </div>                  
+                  <input type="button" value="Next" id="manager-setup-action" class="btn btn-outline-success btn-block">
                 </form>
 
         </div>
 
     </div>
 </div>
-   
+<!-- Local JavaScripts -->
+<script type="module" src="js/form-validator.js"></script>   
 </body>
 </html>
