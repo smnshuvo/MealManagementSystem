@@ -7,8 +7,10 @@ var mPasswordVerifier;
 var mSetupButton;
 var mPasswordStatus;
 
+// global functions
 var toastDelayer;
-
+var SpCharFormat = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+var emailFormat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; // found emailFormat in stackOverflow
 loadDOM();
 
 
@@ -27,18 +29,17 @@ function loadEventListener(){
     mSetupButton.addEventListener('click', verifyManagerData);
     mPassword.addEventListener('keyup',checkPasswordLength);
     mPasswordVerifier.addEventListener('keyup',matchPassword);
+    mUname.addEventListener('keyup',validateUsername);
+    mEmail.addEventListener('keyup', validateEmail);
 }
 
 function verifyManagerData(e) {
     e.preventDefault();
-    console.log(mPasswordInfo);
     // removing all classes
     mPasswordInfo.className = "";
     mPasswordInfo.classList.add('alert');
     mPasswordInfo.classList.add('alert-danger');
-    mPasswordInfo.textContent = "Password Did Not Match";
-    console.log(mPasswordInfo);
-    
+    mPasswordInfo.textContent = "Password Did Not Match";   
     
     
 }
@@ -60,10 +61,11 @@ function checkPasswordLength(){
 
 function matchPassword(){
     console.log(mPassword.value.indexOf(mPasswordVerifier.value));
-    
-    if (mPassword.value.indexOf(mPasswordVerifier.value) != 0 ){
+    if (mPassword.value == mPasswordVerifier.value){
+        showToast('success', "Matched !");
+    }else if (mPassword.value.indexOf(mPasswordVerifier.value) != 0 ){
         showToast('danger', "Mismatched");
-    } else{
+    }else{
         showToast('info', "Matching! Keep Going");
     }
 }
@@ -99,4 +101,18 @@ function showToast(toastType, Message){
     mPasswordStatus.className = ""
     mPasswordStatus.innerHTML = "";
     }, 2000);
+}
+
+function validateUsername(){
+    if(SpCharFormat.test(mUname.value)){
+        showToast('danger', "Username shan't contain any special characters or whitespcae.");
+    }
+}
+
+function validateEmail(){
+    if(emailFormat.test(mEmail.value)){
+        showToast('success',"Valid Email Address");
+    }else{
+        showToast('danger',"Invalid Email Address !")
+    }
 }

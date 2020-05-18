@@ -47,7 +47,7 @@ Developed by SMN Shuvo
                 <div class="row">
                 <div class="col p-4 align-self-start">
                     <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>                    
-                        Enter a meal manager username and password                    
+                        Enter a meal manager username and password                                            
                 </div>
                 <div class="col p-4 align-self-start">
                     <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>                    
