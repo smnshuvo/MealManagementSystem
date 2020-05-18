@@ -44,12 +44,21 @@ Developed by SMN Shuvo
             It seems you are using this wizard for the first time. This <strong> Meal Management System </strong> is developed by 
             <strong> SMN Shuvo</strong> for his personal purpose. Let's get to know more about it.
             <div class="d-flex">
-                <div class="p-4 align-self-start">
-                    <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>
-                    
-                        Enter a meal manager username and password
-                    
+                <div class="row">
+                <div class="col p-4 align-self-start">
+                    <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>                    
+                        Enter a meal manager username and password                    
                 </div>
+                <div class="col p-4 align-self-start">
+                    <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>                    
+                        Choose a password and remember it                    
+                </div>
+                <div class="col p-4 align-self-start">
+                    <i class="fas fa-leaf fa-2x rainbow_text_animated"></i>                    
+                        Your email is important in case you forget the password                   
+                </div>
+                </div>
+                
             </div>
             
         </p>
@@ -60,16 +69,16 @@ Developed by SMN Shuvo
         <div class="col-lg-4">
         <form action="">
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" placeholder="Manager Username">
+                    <input type="text" class="form-control form-control-md" placeholder="Manager Username">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" placeholder="Email">
+                    <input type="email" class="form-control form-control-md" placeholder="Email">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" placeholder="Password">
+                    <input type="password" class="form-control form-control-md" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                    <input type="password" class="form-control form-control-md" placeholder="Confirm Password">
                   </div>
                   <input type="button" value="Next" class="btn btn-outline-success btn-block">
                 </form>
