@@ -79,7 +79,8 @@ Developed by SMN Shuvo
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control-md" placeholder="Confirm Password" id="manager-password-verifier">
-                  </div>                  
+                  </div>
+                  <div class="alert d-none" id='manager-password-info'></div>                  
                   <input type="button" value="Next" id="manager-setup-action" class="btn btn-outline-success btn-block">
                 </form>
 
