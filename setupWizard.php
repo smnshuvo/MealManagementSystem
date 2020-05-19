@@ -32,7 +32,7 @@ Developed by SMN Shuvo
     
 </nav>
 
-<div class="container" id="setup">
+<div class="container" id="setup-manager">
     <div class="row">
 
         <!-- Information section -->
@@ -66,7 +66,7 @@ Developed by SMN Shuvo
         </div>
 
         <!-- This section takes the entry -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
         <form action="">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-md" placeholder="Manager Username" id="manager-username">
@@ -86,6 +86,95 @@ Developed by SMN Shuvo
 
         </div>
 
+    </div>
+</div>
+
+<!-- mess members section -->
+<div class="container y-4" id="mess-member-setup">
+    <div class="row">
+
+        <div class="col-md-4">            
+            <div class="card">
+                <div class="card-header"><h4 class="text-justify"><i class="fa fa-users" aria-hidden="true"></i>  How many members do you have in your mess?</h4></div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Number of mess members">
+                        <div class="input-group-apend">
+                            <button class="btn btn-outline-secondary" type="button">
+                             Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 ">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <i class="fa fa-user" aria-hidden="true"></i> Member 1
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <i class="fa fa-user" aria-hidden="true"></i> Member 2
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <i class="fa fa-user" aria-hidden="true"></i> Member 3
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end -->
+
+                
+
+                
+
+                
+
+            </div>
+        </div>
     </div>
 </div>
 <!-- Local JavaScripts -->
