@@ -6,6 +6,9 @@ var mPassword;
 var mPasswordVerifier;
 var mSetupButton;
 var mPasswordStatus;
+var btnMember;
+var iMemberCount;
+var btnSubmitMembers;
 
 // global functions
 var toastDelayer;
@@ -20,8 +23,10 @@ function loadDOM(){
     mPassword = document.getElementById('manager-password');
     mPasswordVerifier = document.getElementById('manager-password-verifier');
     mSetupButton = document.getElementById('manager-setup-action');
-    mPasswordStatus = document.getElementById('manager-password-info')
-    
+    mPasswordStatus = document.getElementById('manager-password-info');
+    iMemberCount = document.getElementById('total-mess-member');
+    btnMember = document.getElementById('mess-member-submit');
+    btnSubmitMembers = document.getElementById('submit-mess-members');
     loadEventListener();
 }
 
@@ -31,6 +36,8 @@ function loadEventListener(){
     mPasswordVerifier.addEventListener('keyup',matchPassword);
     mUname.addEventListener('keyup',validateUsername);
     mEmail.addEventListener('keyup', validateEmail);
+    btnMember.addEventListener('click', createMemberForm);
+    btnSubmitMembers.addEventListener('click', createMemberList);
 }
 
 function verifyManagerData(e) {
@@ -115,4 +122,73 @@ function validateEmail(){
     }else{
         showToast('danger',"Invalid Email Address !")
     }
+}
+
+function createMemberForm(){
+    
+    let totalMember = iMemberCount.value;
+    let messMemberDOM = document.getElementById('member-add-section');    
+    for(let i=0;i<totalMember;i++){
+        messMemberDOM.insertAdjacentHTML('beforeend', getMemberFormHTML(i+1));
+    }
+    
+    
+}
+
+function getMemberFormHTML(memberID){
+    let MemberForm = `
+    <div class="col-md-4 mb-4">
+    <div class="card">
+        <div class="card-header text-center">
+            <i class="fa fa-user" aria-hidden="true"></i> Member ${memberID}
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="Username" id="member-uname">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="Email" id="member-pwd">
+                </div>
+            </form>  
+        </div>
+   
+`;
+return MemberForm;
+}
+
+function createMemberList(){
+    let MemberFormDOM = document.getElementById('member-add-section');
+    /* Thought of doing this in one line
+    * But Multiple Line solution suited the best
+    * I mean less brain pressure for someone who
+    * is reading the code
+    */
+
+    // Selecting the card from there
+    let MemberFormCardDOM = MemberFormDOM.querySelectorAll('.card');
+    // Then selecting the name and their emails
+    let MemberList = [];
+    MemberFormCardDOM.forEach((value, index, Mobject)=>{      
+        
+      let mName = MemberFormCardDOM[index].querySelector("#member-uname").value;
+      let mEmail = MemberFormCardDOM[index].querySelector("#member-pwd").value;
+      
+      /*
+      Copied this script from stackOverFlow to generate random password
+      */
+      let mPassword = Math.random().toString(36).substring(7);
+      // there's a little change of the password being empty
+      if(mPassword.length == 0){
+        // it cannot be a blank password twice
+        mPassword = Math.random().toString(36).substring(7);
+      }
+      MemberList.push(new User(mName, mEmail, mPassword));
+       
+    });
+
+    console.table(MemberList);
+    
+    
+    
 }
