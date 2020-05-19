@@ -98,74 +98,28 @@ Developed by SMN Shuvo
                 <div class="card-header"><h4 class="text-justify"><i class="fa fa-users" aria-hidden="true"></i>  How many members do you have in your mess?</h4></div>
                 <div class="card-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Number of mess members">
+                        <input type="text" class="form-control" id="total-mess-member" placeholder="Number of mess members">
                         <div class="input-group-apend">
-                            <button class="btn btn-outline-secondary" type="button">
+                            <button class="btn btn-outline-secondary" type="button" id="mess-member-submit">
                              Next <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div>
+                <button class="btn btn-outline-secondary btn-block" id="submit-mess-members">
+                    Create
+                </button>
+            </div>
         </div>
 
         <div class="col-md-8 ">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <i class="fa fa-user" aria-hidden="true"></i> Member 1
-                        </div>
-                        <div class="card-body">
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
-                                </div>
-                            </form>  
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="member-add-section">                
+            </div>
+        </div>
 
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <i class="fa fa-user" aria-hidden="true"></i> Member 2
-                        </div>
-                        <div class="card-body">
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
-                                </div>
-                            </form>  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <i class="fa fa-user" aria-hidden="true"></i> Member 3
-                        </div>
-                        <div class="card-body">
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Email">
-                                </div>
-                            </form>  
-                        </div>
-                    </div>
-                </div>
-
-                <!-- end -->
+                <!-- end of mess member -->
 
                 
 
@@ -175,8 +129,10 @@ Developed by SMN Shuvo
 
             </div>
         </div>
-    </div>
+    </div>    
 </div>
+<!-- end of section -->
+
 <!-- Local JavaScripts -->
 <script type="module" src="js/form-validator.js"></script>   
 </body>
