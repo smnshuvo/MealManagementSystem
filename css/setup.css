@@ -5,3 +5,21 @@
 #mess-member-setup{
     margin-top: 100px;
 }
+
+.ani{
+  animation: 1s item-appear;
+  
+}
+
+@keyframes item-appear {
+    from {
+      margin-left: -200px;
+      margin-right: 200px;
+      opacity: 0;
+    }
+    to {
+      margin-left: 0;
+      margin-right: 0;
+      opacity: 1;
+    }
+  }

@@ -137,7 +137,7 @@ function createMemberForm(){
 
 function getMemberFormHTML(memberID){
     let MemberForm = `
-    <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-4 ani">
     <div class="card">
         <div class="card-header text-center">
             <i class="fa fa-user" aria-hidden="true"></i> Member ${memberID}
@@ -169,6 +169,8 @@ function createMemberList(){
     let MemberFormCardDOM = MemberFormDOM.querySelectorAll('.card');
     // Then selecting the name and their emails
     let MemberList = [];
+    // Adding event listener to all member is difficult and may affect performance
+    // I won't add it.
     MemberFormCardDOM.forEach((value, index, Mobject)=>{      
         
       let mName = MemberFormCardDOM[index].querySelector("#member-uname").value;

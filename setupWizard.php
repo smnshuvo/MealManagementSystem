@@ -106,16 +106,22 @@ Developed by SMN Shuvo
                         </div>
                     </div>
                 </div>
+                
+            </div>
+
+            <div class="alert alert-danger d-none d-lg-block">
+                Invalid Password
+            </div>
+            
+        </div>
+
+        <div class="col-md-8 ">
+            <div class="row" id="member-add-section">                
             </div>
             <div>
                 <button class="btn btn-outline-secondary btn-block" id="submit-mess-members">
                     Create
                 </button>
-            </div>
-        </div>
-
-        <div class="col-md-8 ">
-            <div class="row" id="member-add-section">                
             </div>
         </div>
 
