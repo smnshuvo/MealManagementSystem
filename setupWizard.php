@@ -93,11 +93,11 @@ Developed by SMN Shuvo
 <div class="container y-4" id="mess-member-setup">
     <div class="row">
 
-        <div class="col-md-4">            
+        <div class="col-md-4 mb-3">            
             <div class="card">
                 <div class="card-header"><h4 class="text-justify"><i class="fa fa-users" aria-hidden="true"></i>  How many members do you have in your mess?</h4></div>
                 <div class="card-body">
-                    <div class="input-group mb-3">
+                    <div class="input-group">
                         <input type="text" class="form-control" id="total-mess-member" placeholder="Number of mess members">
                         <div class="input-group-apend">
                             <button class="btn btn-outline-secondary" type="button" id="mess-member-submit">

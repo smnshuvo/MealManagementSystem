@@ -70,10 +70,13 @@ function matchPassword(){
     console.log(mPassword.value.indexOf(mPasswordVerifier.value));
     if (mPassword.value == mPasswordVerifier.value){
         showToast('success', "Matched !");
+        return true;
     }else if (mPassword.value.indexOf(mPasswordVerifier.value) != 0 ){
         showToast('danger', "Mismatched");
+        return false;
     }else{
         showToast('info', "Matching! Keep Going");
+        return false;
     }
 }
 
@@ -131,7 +134,12 @@ function createMemberForm(){
     for(let i=0;i<totalMember;i++){
         messMemberDOM.insertAdjacentHTML('beforeend', getMemberFormHTML(i+1));
     }
-    
+    // making the window scrolled a bit
+    window.scroll({
+        top: 200+window.scrollY,
+        left: 100,
+        behavior: 'smooth'
+      });
     
 }
 
@@ -158,6 +166,8 @@ return MemberForm;
 }
 
 function createMemberList(){
+    console.log(matchPassword());
+    
     let MemberFormDOM = document.getElementById('member-add-section');
     /* Thought of doing this in one line
     * But Multiple Line solution suited the best

@@ -7,7 +7,7 @@
 }
 
 .ani{
-  animation: 1s item-appear;
+  animation: .5s item-appear; 
   
 }
 
