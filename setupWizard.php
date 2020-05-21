@@ -67,7 +67,7 @@ Developed by SMN Shuvo
 
         <!-- This section takes the entry -->
         <div class="col-lg-4 mb-4">
-        <form action="">
+        <form action="createTable.php" action="POST">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-md" placeholder="Manager Username" id="manager-username">
                   </div>

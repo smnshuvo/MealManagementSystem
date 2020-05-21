@@ -42,11 +42,28 @@ function loadEventListener(){
 
 function verifyManagerData(e) {
     e.preventDefault();
-    // removing all classes
-    mPasswordInfo.className = "";
-    mPasswordInfo.classList.add('alert');
-    mPasswordInfo.classList.add('alert-danger');
-    mPasswordInfo.textContent = "Password Did Not Match";   
+    let mManager = new User(mUname.value, mEmail.value, mPassword.value, 1);
+    // We need to verify the manager data client side and then 
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "createTable.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader('API_KEY', 'your-api-key');
+    xhr.send(`POST_ID=${mUname.value}&JSON_DATA=${JSON.stringify(mManager)}`);
+    xhr.onreadystatechange = function(){
+        if (this.readyState == XMLHttpRequest.DONE && this.status == 200){
+            if(this.response == "OK"){
+                console.log("Posted");
+
+            
+            } else {
+                console.log(this.response);
+                
+            }
+        }
+    }
+    
+
+       
     
     
 }
@@ -70,13 +87,10 @@ function matchPassword(){
     console.log(mPassword.value.indexOf(mPasswordVerifier.value));
     if (mPassword.value == mPasswordVerifier.value){
         showToast('success', "Matched !");
-        return true;
     }else if (mPassword.value.indexOf(mPasswordVerifier.value) != 0 ){
         showToast('danger', "Mismatched");
-        return false;
     }else{
         showToast('info', "Matching! Keep Going");
-        return false;
     }
 }
 
@@ -123,7 +137,7 @@ function validateEmail(){
     if(emailFormat.test(mEmail.value)){
         showToast('success',"Valid Email Address");
     }else{
-        showToast('danger',"Invalid Email Address !")
+        showToast('danger',"Invalid Email Address !");
     }
 }
 
@@ -166,8 +180,6 @@ return MemberForm;
 }
 
 function createMemberList(){
-    console.log(matchPassword());
-    
     let MemberFormDOM = document.getElementById('member-add-section');
     /* Thought of doing this in one line
     * But Multiple Line solution suited the best
